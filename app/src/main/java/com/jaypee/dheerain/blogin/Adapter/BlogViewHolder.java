@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
+import com.jaypee.dheerain.blogin.Activities.OpenedActivity;
+import com.jaypee.dheerain.blogin.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;

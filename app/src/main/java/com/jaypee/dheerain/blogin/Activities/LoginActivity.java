@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -7,8 +7,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +21,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,11 +34,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.jaypee.dheerain.blogin.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email,password;
     TextView heading;
-    SignInButton mGoogleSignin;
+    ImageView mGoogleSignin;
     Button login,signup;
     FirebaseAuth mauth;
     LinearLayout linearLayout;
@@ -45,20 +48,25 @@ public class LoginActivity extends AppCompatActivity {
     String TAG="Login_activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         email=(EditText) findViewById(R.id.emailField);
         heading= (TextView) findViewById(R.id.heading);
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/orange.ttf");
-linearLayout=(LinearLayout)findViewById(R.id.linear);
+        linearLayout=(LinearLayout)findViewById(R.id.linear);
         heading.setTypeface(custom_font);
         password=(EditText) findViewById(R.id.passwordField);
         signup= (Button) findViewById(R.id.signup);
         login= (Button) findViewById(R.id.login);
 
-//        ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(175);
+        ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(125);
 
-        mGoogleSignin= (SignInButton) findViewById(R.id.google);
+        mGoogleSignin= (ImageView) findViewById(R.id.google);
 
 
         mauth=FirebaseAuth.getInstance();

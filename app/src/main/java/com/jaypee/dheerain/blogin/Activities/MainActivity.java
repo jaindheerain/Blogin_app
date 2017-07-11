@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.jaypee.dheerain.blogin.Adapter.BlogViewHolder;
+import com.jaypee.dheerain.blogin.R;
+import com.jaypee.dheerain.blogin.Model.blog;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView bloglist;

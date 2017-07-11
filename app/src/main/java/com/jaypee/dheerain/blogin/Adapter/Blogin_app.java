@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Adapter;
 
 import android.app.Application;
 

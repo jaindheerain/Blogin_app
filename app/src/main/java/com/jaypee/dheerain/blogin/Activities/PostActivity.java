@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Activities;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
@@ -30,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.jaypee.dheerain.blogin.R;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.Date;

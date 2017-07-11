@@ -1,4 +1,4 @@
-package com.jaypee.dheerain.blogin;
+package com.jaypee.dheerain.blogin.Model;
 
 /**
  * Created by Dheerain on 18-03-2017.
