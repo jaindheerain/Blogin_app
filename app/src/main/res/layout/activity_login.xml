@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/linear"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/imgserver"
+    android:gravity="center"
+    android:weightSum="9"
+    tools:context="com.jaypee.dheerain.blogin.LoginActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="90dp"
+    android:paddingTop="20dp"
+    android:id="@+id/heading"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:text="SaBLoG"/>
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/materialTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/passwordField"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:hint="Email" />
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/materialTextField2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/materialTextField"
+        android:layout_alignStart="@+id/materialTextField"
+        android:layout_below="@+id/materialTextField"
+        android:layout_marginTop="0dp"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/login"
+            android:layout_alignLeft="@+id/materialTextField"
+            android:layout_alignStart="@+id/materialTextField"
+            android:layout_marginBottom="34dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:weightSum="2">
+    <Button
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_weight="0.7"
+        android:outlineProvider="background"
+        android:background="@drawable/button_green"
+        android:layout_width="0dp"
+        android:id="@+id/login"
+        android:textColor="#ffffff"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/button_green"
+android:textColor="#ffffff"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:id="@+id/signup"
+
+        />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"></com.google.android.gms.common.SignInButton>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/twitter"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"></com.google.android.gms.common.SignInButton>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"></com.google.android.gms.common.SignInButton>
+</LinearLayout>
+</LinearLayout>

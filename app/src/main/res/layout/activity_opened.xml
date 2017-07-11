@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jaypee.dheerain.blogin.OpenedActivity">
+
+
+    <ImageView
+        android:id="@+id/user_dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user_name"
+        android:id="@+id/user_name"
+        android:textSize="16dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/date"
+        android:layout_toRightOf="@+id/user_dp"
+        android:layout_toEndOf="@+id/user_dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="16dp"
+        android:layout_alignBottom="@+id/user_dp"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_alignStart="@+id/user_name"
+        android:id="@+id/date" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/user_dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/blog_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/cast_ic_mini_controller_stop"
+            android:layout_below="@+id/user_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="24dp"
+            android:id="@+id/title"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gandhi is a 1982 British-Indian epic biographical drama film which dramatises the life of Mohandas Karamchand Gandhi, the leader of India's non-violent, non-cooperative independence movement against the United Kingdom's rule of the country during the 20th century. Gandhi was written by John Briley and produced and directed by Richard Attenborough. It stars Ben Kingsley in the title role. The film covers Gandhi's life from a defining moment in 1893, as he is thrown off a South African train for being in a whites-only compartment, and concludes with his assassination and funeral in 1948. Although a practising Hindu, Gandhi's embracing of other faiths, particularly Christianity and Islam, is also depicted.
+
+Gandhi was released in India on 30 November 1982, in the United Kingdom on 3 December, and in the United States on 10 December.[3] It was nominated for Academy Awards in eleven categories, winning eight, including Best Picture and Best Director for Attenborough, Best Actor for Ben Kingsley, and Best Original Screenplay for Briley. The film was screened retrospective on 12 August 2016 as the Opening Film at the Independence Day Film Festival jointly presented by the Indian Directorate of Film Festivals and Ministry of Defense, commemorating 70th Indian Independence Day.[4][5] The screenplay of Gandhi is available as a published book.[6][7]"
+            android:id="@+id/description"
+            android:layout_below="@+id/blog_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="18dp" />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
