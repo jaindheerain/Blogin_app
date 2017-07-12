@@ -80,7 +80,7 @@ public class OpenedActivity extends AppCompatActivity {
                 .load(image)
                 .networkPolicy(NetworkPolicy.OFFLINE)
                 .centerCrop()
-                .resize(500,200)
+                .resize(500,500)
                 .into(blogImage, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -92,7 +92,7 @@ public class OpenedActivity extends AppCompatActivity {
                         Picasso.with(OpenedActivity.this)
                                 .load(image)
                                 .centerCrop()
-                                .resize(500,200)
+                                .resize(500,500)
                                 .into(blogImage);
                     }
                 });
