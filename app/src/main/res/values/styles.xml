@@ -7,11 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="Theme.NoToolBar" parent="Theme.AppCompat.NoActionBar">   <item name="android:windowIsTranslucent">false</item>
+    <style name="Theme.NoToolBar" parent="Theme.AppCompat.Light.NoActionBar">   <item name="android:windowIsTranslucent">false</item>
 
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="colorPrimary">#737373</item>
-        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
         <item name="colorPrimaryDark">#737373</item></style><!--this is the style to get the toolbar deleted-->
 </resources>

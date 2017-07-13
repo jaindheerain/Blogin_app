@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         signup= (Button) findViewById(R.id.signup);
         login= (Button) findViewById(R.id.login);
 
-        ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(125);
+     ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(125);
 
         mGoogleSignin= (ImageView) findViewById(R.id.google);
 

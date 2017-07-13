@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_logout) {
             mauth.signOut();
         }
+        if(item.getItemId()==R.id.action_setting){
+            Intent i=new Intent(MainActivity.this,BookmarkActivity.class);
+            startActivity(i);
+        }
         return super.onOptionsItemSelected(item);
     }
 

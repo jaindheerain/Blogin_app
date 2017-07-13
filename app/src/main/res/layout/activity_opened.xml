@@ -38,12 +38,11 @@
         <android.support.v4.widget.Space
         android:layout_width="match_parent"
         android:layout_height="30dp"
-            android:background="@android:color/transparent"
+            android:background="#000000"
             android:backgroundTint="#000000"
             android:backgroundTintMode="src_over"
         android:paddingTop="240dp"
-        android:textColor="#000000"
-        app:layout_collapseMode="parallax"/>
+         app:layout_collapseMode="parallax"/>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/main.toolbar"
@@ -62,6 +61,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#e6e6e6"
             android:orientation="vertical"
             android:paddingTop="10dp"
             android:layout_below="@+id/user_dp"
@@ -72,12 +72,20 @@
             android:layout_height="wrap_content"
             android:text="Title"
             android:textSize="24dp"
+        android:textColor="#404040"
             android:gravity="center"
             android:id="@+id/title"
             android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/bookmark"
+                android:src="@mipmap/icon"
+                />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#404040"
             android:text="Gandhi is a 1982 British-Indian epic biographical drama film which dramatises the life of Mohandas Karamchand Gandhi, the leader of India's non-violent, non-cooperative independence movement against the United Kingdom's rule of the country during the 20th century. Gandhi was written by John Briley and produced and directed by Richard Attenborough. It stars Ben Kingsley in the title role. The film covers Gandhi's life from a defining moment in 1893, as he is thrown off a South African train for being in a whites-only compartment, and concludes with his assassination and funeral in 1948. Although a practising Hindu, Gandhi's embracing of other faiths, particularly Christianity and Islam, is also depicted.
 
 Gandhi was released in India on 30 November 1982, in the United Kingdom on 3 December, and in the United States on 10 December.[3] It was nominated for Academy Awards in eleven categories, winning eight, including Best Picture and Best Director for Attenborough, Best Actor for Ben Kingsley, and Best Original Screenplay for Briley. The film was screened retrospective on 12 August 2016 as the Opening Film at the Independence Day Film Festival jointly presented by the Indian Directorate of Film Festivals and Ministry of Defense, commemorating 70th Indian Independence Day.[4][5] The screenplay of Gandhi is available as a published book.[6][7]"

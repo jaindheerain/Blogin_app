@@ -108,6 +108,7 @@ public class BlogViewHolder extends RecyclerView.ViewHolder{
                 Intent openActivity=new Intent(co,OpenedActivity.class);
                 Toast.makeText(co, ""+blog_id, Toast.LENGTH_SHORT).show();
                 openActivity.putExtra("blog_id",blog_id);
+                openActivity.setAction("online");
                 co.startActivity(openActivity);
             }
         });
