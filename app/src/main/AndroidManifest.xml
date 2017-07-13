@@ -27,12 +27,13 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity
             android:name=".Activities.LoginActivity"
-            android:theme="@style/Theme.NoToolBar"></activity>
+            android:theme="@style/Theme.NoToolBar" />
         <activity android:name=".Activities.SetupActivity" />
         <activity
             android:name=".Activities.OpenedActivity"
-            android:theme="@style/Theme.NoToolBar"></activity>
-        <activity android:name=".Activities.BookmarkActivity"></activity>
+            android:theme="@style/Theme.NoToolBar" />
+        <activity android:name=".Activities.BookmarkActivity" />
+        <activity android:name=".Activities.trail"></activity>
     </application>
 
 </manifest>
