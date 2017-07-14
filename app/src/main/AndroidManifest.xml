@@ -23,7 +23,9 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".Activities.PostActivity" />
+        <activity
+            android:name=".Activities.PostActivity"
+            android:theme="@style/Theme.NoToolBar" />
         <activity android:name=".Activities.RegisterActivity" />
         <activity
             android:name=".Activities.LoginActivity"
@@ -32,8 +34,9 @@
         <activity
             android:name=".Activities.OpenedActivity"
             android:theme="@style/Theme.NoToolBar" />
-        <activity android:name=".Activities.BookmarkActivity" />
-        <activity android:name=".Activities.trail"></activity>
+        <activity
+            android:name=".Activities.BookmarkActivity"
+            />
     </application>
 
 </manifest>

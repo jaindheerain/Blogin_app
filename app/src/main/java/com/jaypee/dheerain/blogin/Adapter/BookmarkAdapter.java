@@ -22,7 +22,7 @@ import io.realm.RealmResults;
 
 public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHolder> {
 
-    RealmResults<SavedPost> list;
+    RealmResults<SavedPost> list;   //this objects get the element returned by realm
     Context context;
 
     public BookmarkAdapter(RealmResults<SavedPost> list, Context context) {
@@ -35,7 +35,6 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
 
         View v= LayoutInflater.from(context).inflate(R.layout.post_layout,parent,false);
         ViewHolder viewHolder=new ViewHolder(v);
-        int a=12;
         return viewHolder;
     }
 
@@ -50,7 +49,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 Intent openact=new Intent(context, OpenedActivity.class);
-                openact.setAction("offline");
+                openact.setAction("offline"); //action set to distngguish between inetent in opened activity
                 openact.putExtra("title",list.get(position).getTitle());
                 openact.putExtra("discription",list.get(position).getDiscription());
                 openact.putExtra("date",list.get(position).getDate());

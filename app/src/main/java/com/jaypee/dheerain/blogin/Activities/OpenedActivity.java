@@ -52,7 +52,7 @@ public class OpenedActivity extends AppCompatActivity {
 
         setRealmConfigration();
 
-        this.realm = RealmController.with(this).getRealm();
+        this.realm = RealmController.with(this).getRealm(); // getting the insatnce of the realm database
 
         blog_id = getIntent().getStringExtra("blog_id");
         //userName = (TextView) findViewById(R.id.user_name);
@@ -67,17 +67,17 @@ public class OpenedActivity extends AppCompatActivity {
         Intent decider=getIntent();
         if(decider.getAction()== "online")
         {
-            setViewByFirebase();
+            setViewByFirebase();// here we set the opened activity using firebase if online acton is called using the intent
         }
         else
         {
-            setViewByRealm(decider);
+            setViewByRealm(decider);// here we open the view using the realm database if the action called is offline
         }
 
         bookMark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                realm.beginTransaction();
+                realm.beginTransaction();   // here we beinthe
                 realm.copyToRealm(savedPost);
                 realm.commitTransaction();
             }
@@ -117,7 +117,7 @@ public class OpenedActivity extends AppCompatActivity {
                         ,data.getDiscription()
                         ,data.getDp()
                         ,data.getName()
-                        ,data.getImage());
+                        ,data.getImage());  ///creating object for the saved post object to be saved in th realm database
             }
 
             @Override

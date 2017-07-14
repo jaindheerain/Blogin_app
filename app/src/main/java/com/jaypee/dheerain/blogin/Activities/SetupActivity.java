@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,7 +27,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class SetupActivity extends AppCompatActivity {
     FirebaseAuth mauth;
 
-    ImageButton mDp;
+    ImageView mDp;
     EditText user_name;
     Button submit;
 
@@ -52,7 +52,7 @@ public class SetupActivity extends AppCompatActivity {
 
         mref= FirebaseDatabase.getInstance().getReference().child("USER");
         mstorage= FirebaseStorage.getInstance().getReference();
-        mDp= (ImageButton) findViewById(R.id.dp_image);
+        mDp= (ImageView) findViewById(R.id.dp_image);
         user_name= (EditText) findViewById(R.id.user_name);
         submit= (Button) findViewById(R.id.submit);
 

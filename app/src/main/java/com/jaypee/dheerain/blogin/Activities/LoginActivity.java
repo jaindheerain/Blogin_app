@@ -52,19 +52,19 @@ public class LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+//to extend the activity to full window full screen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         email=(EditText) findViewById(R.id.emailField);
         heading= (TextView) findViewById(R.id.heading);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/orange.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/orange.ttf");// adding coustom font to the saBLog title
         linearLayout=(LinearLayout)findViewById(R.id.linear);
         heading.setTypeface(custom_font);
         password=(EditText) findViewById(R.id.passwordField);
         signup= (Button) findViewById(R.id.signup);
         login= (Button) findViewById(R.id.login);
 
-     ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(125);
+     ((LinearLayout)findViewById(R.id.linear)).getBackground().setAlpha(125); // lightning the background , decreasing the opacity using alpha fucntion
 
         mGoogleSignin= (ImageView) findViewById(R.id.google);
 
@@ -94,7 +94,7 @@ signup.setOnClickListener(new View.OnClickListener() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
-                .build();
+                .build();           // building the gooogle signup button
 
         mGoogleApiClient=new GoogleApiClient.Builder(this).
                 enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {

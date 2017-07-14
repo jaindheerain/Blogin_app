@@ -19,16 +19,16 @@ public class BookmarkActivity extends AppCompatActivity {
 
     RecyclerView bookMarkView;
     RealmResults<SavedPost> savedPost;
-
+//realm object so that we can access the realm database
     private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmark);
-        setRealmConfigration();
+        setRealmConfigration();  //we need to set the config rat
         savedPost=null;
-        this.realm = RealmController.with(getApplication()).getRealm();
+        this.realm = RealmController.with(getApplication()).getRealm(); //here wwe get the insatnce using the context of the acctivity
 
         bookMarkView= (RecyclerView) findViewById(R.id.bookmarkRecyclerView);
         bookMarkView.setLayoutManager(new LinearLayoutManager(this));
@@ -40,6 +40,8 @@ public class BookmarkActivity extends AppCompatActivity {
     }
     void setRealmConfigration()
     {
+
+        // realm configration
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this)
                 .name(Realm.DEFAULT_REALM_NAME)
                 .schemaVersion(0)

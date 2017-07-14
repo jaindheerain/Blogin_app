@@ -140,7 +140,6 @@ public class PostActivity extends AppCompatActivity {
             Toast.makeText(this, "i am here", Toast.LENGTH_SHORT).show();
                    CropImage.activity(image)
                     .setGuidelines(com.theartofdev.edmodo.cropper.CropImageView.Guidelines.ON)
-                           .setAspectRatio(100,100)
                     .start(PostActivity.this);/*we satrt this cativity to crop the image*/
             Toast.makeText(this, "cleraed this", Toast.LENGTH_SHORT).show();
 
@@ -168,7 +167,7 @@ public class PostActivity extends AppCompatActivity {
 
             SimpleDateFormat df = null;
 
-            df = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            df = new SimpleDateFormat("dd-MM-yyyy");
 
             String formattedDate = df.format(c.getTime());
 
@@ -176,6 +175,6 @@ public class PostActivity extends AppCompatActivity {
         }
 
         return DateFormat.getDateTimeInstance().format(new Date());
-
+//here we get the date and time
     }
 }
